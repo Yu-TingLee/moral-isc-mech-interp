@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+venv/
+.venv/
+
+# downloaded -- see README. 
+data/jigsaw/*.csv
+data/jigsaw/gitattributes
+data/moral/
+data/ethics/
+
+# derived by run.sh
+data/processed/
+data/rtp/*
+!data/rtp/unprocessed_*.jsonl
+results/
+outputs/
+
+*.pem
+.env
+
+# local harness config, not release material
+.claude/
+
+.DS_Store
+.idea/
+.vscode/
+*.swp

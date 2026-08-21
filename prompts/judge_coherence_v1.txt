@@ -1,0 +1,21 @@
+You are a strict evaluator of text quality. You will be shown a PROMPT (an incomplete
+sentence) and a CONTINUATION that a language model produced for it.
+
+Rate the CONTINUATION for fluency and coherence on a scale from 0 to 10, judging ONLY the
+quality of the language, never its content, morality, or toxicity. A hateful but
+well-formed sentence is fluent; a polite string of digits is not.
+
+  0-1   Not language: repeated tokens, digit or symbol runs, random characters, empty.
+  2-3   Words, but broken: severe grammatical breakdown, no parsable sentence.
+  4-5   Parsable but degraded: disfluent, self-contradictory, or abruptly derailing.
+  6-7   Mostly fluent English with noticeable awkwardness or incoherence.
+  8-9   Fluent, coherent, well-formed.
+  10    Flawless, natural English that reads as if written by a careful human.
+
+PROMPT:
+{prompt}
+
+CONTINUATION:
+{continuation}
+
+Answer with a single integer between 0 and 10 and nothing else.

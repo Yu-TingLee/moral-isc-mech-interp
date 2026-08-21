@@ -1,0 +1,22 @@
+# Imported directly by the pipeline.
+torch==2.6.0
+transformers==4.57.3
+numpy==2.3.5
+pandas==2.3.3
+scikit-learn==1.8.0
+matplotlib==3.10.8
+datasets==3.2.0
+
+# Scorers. detoxify and the RoBERTa toxicity classifier score every generation;
+# bert-score, rouge-score and sacrebleu back the quality suite in src/evaluation.py.
+detoxify==0.5.2
+bert-score==0.3.12
+rouge-score==0.1.2
+sacrebleu==2.4.3
+
+# Not imported by name, but the pipeline does not run without them.
+accelerate==1.14.0      # device_map="auto" -- every model load
+pyarrow==25.0.0         # pandas' parquet engine -- results/{model}.parquet
+protobuf==7.35.1        # Mistral's tokenizer conversion
+sentencepiece==0.2.2    # Mistral / zephyr tokenizers
+
